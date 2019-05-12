@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	
+	<title>Express 2 Man - Home Delivery</title>
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../static/bootstrap-4.0.0.css">
+	<link rel="stylesheet" href="../static/custom.css">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	
+	<script src="../static/bootstrap.min.js"></script>
+	<script src="../static/jquery-3.3.1.min.js"></script>
+	<script src="../static/popper.min.js"></script>
+	<script src="../static/all.js"></script>
+	
+	<link rel="canonical" href="track-your-order.html">
+	
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-md navbar-light bg-light stick-top">
+<div class="container-fluid">
+	<a class="navbar-brand" href="https://express2man.co.uk/home/home.html"><img src="../static/img/logo.png" alt="logo"></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarResponsive">
+		<ul  class="navbar-nav ml-auto">
+			<li class="nav-item" active>
+				<a class="nav-link" href="https://express2man.co.uk/home/home.html">HOME</a>
+			</li>
+				<li class="nav-item">
+				<a class="nav-link" href="https://express2man.co.uk/track-your-order/track-your-order.html">TRACK YOUR ORDER</a>
+			</li>
+				<li class="nav-item">
+				<a class="nav-link" href="https://express2man.co.uk/home-delivery/home-delivery.html">HOME DELIVERY</a>
+			</li>
+				<li class="nav-item">
+				<a class="nav-link" href="https://express2man.co.uk/about-us/about-us.html">ABOUT US</a>
+			</li>
+				<li class="nav-item">
+				<a class="nav-link" href="https://express2man.co.uk/contact/contact.html">CONTACT</a>
+			</li>
+		</ul>
+	</div>
+</div>
+</nav>
+
+<!--- Image Slider -->
+
+<!--- Welcome Section -->
+<header><div class="container-fluid padding">
+	<div class="row welcome text-center">
+		<div class="col-md-12">
+			<h1 class="display-4">TRACK YOUR ORDER</h1>
+		</div>
+	</div>
+</div><hr class="light"></header>
+	
+<!--- Tracking -->
+<div class="container-fluid padding">
+	<div class="alert alert-error collapse" role="alert" id="order-not-found-error">
+		<span>
+			<p>The order was not found!</p>
+		</span>
+	</div>
+     <div class="col-xl-8 offset-xl-2 py-5">
+     <h3 align="center">PLEASE ENTER YOUR TRACKING NO.</h3><br> 
+
+	<form class="form-inline" id="contact-form">
+		<div class="form-group" align="center">
+			<label class="sr-only" for="trackingNoInput">TRACKING NO.</label>
+			<input type="trackingNo" class="form-control trackingno" id="trackingNoInput" placeholder="TRACKING NO." required="required" data-error="You have not provided your tracking number.">
+		</div>
+	<button type="submit" class="btn btn-default submitbtn">Submit</button>
+
+	</form>
+
+</div></div>
+
+<p align="center">Please enter your tracking number. Once you have submitted it, you will be redirected to the tracking page.</p><br><br>
+
+<script src="static/ajax.js"></script>
+
+<!--- Footer -->
+
+<footer>	
+<div class="container-fluid padding">
+<div class="row text-center">
+	<div class="col-md-12">
+
+		<h6>E-mail: enquiries@express2man.co.uk</h6>
+		<hr class="light">
+		<p>
+		&copy; 2019 &vert; Express 2 Man (UK) Limited <br>
+		Registered Office: Front Unit, 2 Lloyd Street, <br>
+		Wednesbury, England, WS10 7JJ <br>
+		Company No. 11897615<br>
+		<i>Express 2 Man (UK) Limited is a partner of Eminence Couriers (UK) Limited </i>&vert; All Rights Reserved
+		</p>
+	</div>
+</div>
+</div>
+	
+</footer>
+
+</body>
+
+
+
+</html>
