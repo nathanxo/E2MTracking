@@ -34,7 +34,7 @@ def index():
 def get_track_url():
 	print("AHAHHAHA")
 	print("GOT THINGS: ", request.form['tracking_input']
-	trackurl_dict = genTrackURL(request.form['tracking_input']).upper() #TOBS22272
+	trackurl_dict = genTrackURL(request.form['tracking_input'].upper()) #TOBS22272
 	print("ReturnStuff: ", trackurl_dict)
 	if trackurl_dict['status_code'] != 200:
 		print("Internal Error: ", trackurl_dict)
