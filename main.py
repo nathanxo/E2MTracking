@@ -17,7 +17,7 @@ class InvalidUsage(Exception):
     def to_dict(self):
         rv = dict(self.payload or ())
         rv['message'] = self.message
-        return rv
+        return rv90
 
 
 def randomString(stringLength=10):
@@ -32,15 +32,15 @@ def index():
 
 @app.route('/get_track_url', methods=['POST'])
 def get_track_url():
-	print("AHAHHAHA")
-	print("GOT THINGS: ", request.form['tracking_input']
-	trackurl_dict = genTrackURL(request.form['tracking_input']) #TOBS22272
-	print("ReturnStuff: ", trackurl_dict)
-	if trackurl_dict['status_code'] != 200:
-		print("Internal Error: ", trackurl_dict)
-		raise InvalidUsage("Error: Either Not Found or Server Error", status_code=404)
-	else:
-		return jsonify(tracking_url=trackurl_dict['tracking_url'], tracking_input_recieved=request.form['tracking_input'])
+    print("AHAHHAHA")
+    print("GOT THINGS: ", request.form['tracking_input'])
+    trackurl_dict = genTrackURL(request.form['tracking_input'].upper()) #TOBS22272
+    print("ReturnStuff: ", trackurl_dict)
+    if trackurl_dict['status_code'] != 200:
+        print("Internal Error: ", trackurl_dict)
+        raise InvalidUsage("Error: Either Not Found or Server Error", status_code=404)
+    else:
+        return jsonify(tracking_url=trackurl_dict['tracking_url'], tracking_input_recieved=request.form['tracking_input'])
 
 @app.errorhandler(InvalidUsage)
 def handle_invalid_usage(error):
