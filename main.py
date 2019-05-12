@@ -34,13 +34,15 @@ def index():
 def get_track_url():
 	print("AHAHHAHA")
 	print("GOT THINGS: ", request.form['tracking_input']
-	trackurl_dict = genTrackURL(request.form['tracking_input'].upper()) #TOBS22272
+    tracking_input_old = request.form['tracking_input'],
+    tracking_input_upper = tracking_input_old.upper(),
+	trackurl_dict = genTrackURL(tracking_input_upper) #TOBS22272
 	print("ReturnStuff: ", trackurl_dict)
 	if trackurl_dict['status_code'] != 200:
 		print("Internal Error: ", trackurl_dict)
 		raise InvalidUsage("Error: Either Not Found or Server Error", status_code=404)
 	else:
-		return jsonify(tracking_url=trackurl_dict['tracking_url'], tracking_input_recieved=request.form['tracking_input'])
+		return jsonify(tracking_url=trackurl_dict['tracking_url'], tracking_input_recieved=tracking_input_upper)
 
 @app.errorhandler(InvalidUsage)
 def handle_invalid_usage(error):
