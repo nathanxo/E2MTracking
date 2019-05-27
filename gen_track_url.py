@@ -10,7 +10,7 @@ def randomString(stringLength=10):
 
 def genTrackURL(customer_order_number):
     # Passed in from the AJAX call. 
-    ###customer_order_number = "TOBS22272"  # TODO REMOVE LINE
+    ###customer_order_number = "TOBS22272"#TODOREMOVELINE
 
     url = 'https://www.go2stream.net/API/oauth'
     payload = "grant_type=client_credentials&client_id=EXPRE000000000002&client_secret=BNFBFjrAguUbE3fP593q"
